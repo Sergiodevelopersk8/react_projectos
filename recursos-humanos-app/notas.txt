@@ -1,0 +1,3 @@
+Escritorio/Programacion/react_projectos/recursos-humanos-app$
+
+npm start
