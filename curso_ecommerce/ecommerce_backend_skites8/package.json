@@ -1,0 +1,40 @@
+{
+  "name": "ecommerce-backend-skites-8",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "scripts": {
+    "build": "strapi build",
+    "console": "strapi console",
+    "deploy": "strapi deploy",
+    "dev": "strapi develop",
+    "develop": "strapi develop",
+    "seed:example": "node ./scripts/seed.js",
+    "start": "strapi start",
+    "strapi": "strapi",
+    "upgrade": "npx @strapi/upgrade latest",
+    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+  },
+  "dependencies": {
+    "@strapi/database": "5.52.3",
+    "@strapi/plugin-cloud": "5.52.3",
+    "@strapi/plugin-users-permissions": "5.52.3",
+    "@strapi/strapi": "5.52.3",
+    "better-sqlite3": "12.8.0",
+    "fs-extra": "^10.0.0",
+    "mime-types": "^2.1.27",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.30.3",
+    "styled-components": "^6.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=20.0.0 <=26.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "922da561-089e-451f-8da9-a168ff4cbe23",
+    "installId": "e6a8de1a7dcdc9e4aca1e195cbe18e91ea380e5ad5b7c3900a93f53ed41f52b1"
+  }
+}
