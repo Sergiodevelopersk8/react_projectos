@@ -19,7 +19,7 @@ paso al video
 
           To get started run
           
-          cd C:\Users\pc07\Desktop\credicel-apps\test-next\server-ecommerce
+          cd server-ecommerce
           npm run develop
 
 
