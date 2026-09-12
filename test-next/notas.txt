@@ -1,0 +1,34 @@
+paso al video 
+
+    npm run develop
+          
+          Start Strapi without watch mode.
+          npm run start
+          
+          Build Strapi admin panel.
+          npm run build
+          
+          Deploy Strapi project.
+          npm run deploy
+          
+          Seed your database with sample data.
+          npm run seed:example
+          
+          Display all available commands.
+          npm run strapi
+
+          To get started run
+          
+          cd C:\Users\pc07\Desktop\credicel-apps\test-next\server-ecommerce
+          npm run develop
+
+
+Strapi merinowork28dev@gmail.com Ecommerceweb28*
+
+
+aws Ecomerce28*awsbucket
+
+
+https://signup.aws.amazon.com/billing/signup?type=register&refid=em_127222&p=free&c=hp2&z=1&target=_blank&trk=4f374c9d-ac11-490d-8b23-82df6d4e054b&sc_channel=ps&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation&language=es_es#/identityverification
+
+https://us-east-2.console.aws.amazon.com/console/services?nc2=h_si&region=us-east-2&sc_channel=ps&src=header-signin&trk=4f374c9d-ac11-490d-8b23-82df6d4e054b
