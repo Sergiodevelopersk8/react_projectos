@@ -1,0 +1,7 @@
+mv react-native-course/.git /tmp/react-native-course-git-backup
+git rm --cached -f react-native-course
+git add react-native-course
+git commit -m "Agregar curso de React Native"
+git push origin main
+
+
