@@ -1,15 +1,31 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+
 import './App.css'
 import ListaTareas from './components/ListaTareas'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import EditarTareas from './components/EditarTareas';
+import Navegation from './template/Navegation';
 
 function App() {
  
   return (
     <>
-    <ListaTareas/>
+<BrowserRouter>
+
+    <Navegation/>
+
+<Routes>
+
+  <Route exact path="/" element={<ListaTareas />} />
+    <Route exact path="/editar/:id" element={<EditarTareas />} />
+
+</Routes>
+
+
+
+
+</BrowserRouter>
+
+
     </>
   )
 }
