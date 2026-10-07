@@ -28,6 +28,8 @@ export default function EditarTareas() {
   }
 
   const onInputChange = (e) => {
+
+    //hacemos una copia del objeto tarea y actualizamos el campo correspondiente
     setTarea({ ...tarea, [e.target.name]: e.target.value })
   }
 

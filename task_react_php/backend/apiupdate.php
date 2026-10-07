@@ -53,7 +53,20 @@ try {
             ]);
 
             echo json_encode(["mensaje" => "Tarea actualizada con éxito"]);
-        } else {
+        } 
+         if (isset($datos['id']) ) {
+            $id = $datos['id'];
+            
+            $stmt = $pdo->prepare("UPDATE tarea SET completado = :completado WHERE id = :id");
+            $resultado = $stmt->execute([
+                'id' => $id
+            ]);
+
+            echo json_encode(["mensaje" => "Tarea actualizada con éxito"]);
+        } 
+        
+        
+        else {
             http_response_code(400);
             echo json_encode(["mensaje" => "Datos incompletos"]);
         }

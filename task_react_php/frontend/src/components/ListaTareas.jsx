@@ -11,23 +11,44 @@ import { Link } from 'react-router-dom';
 // Componente funcional ListaTareas
 export default function ListaTareas() {
  
- const onCompleted = async (id, completado) => {
-   try {
-     await axios.put(`http://localhost:8000/apiupdate.php?id=${id}`, { completado })
-     // Actualizar el estado de las tareas
-     setTareas(tareas.map(task => task.id === id ? { ...task, completado } : task))
-   } catch (error) {
-     console.error('Hubo un error al actualizar la tarea:', error)
-   }
- }
+  //const { id } = useParams();
+  const urlApi = 'http://localhost:8000/apiupdate.php'
 
-
-
- 
+  
   // Definir el estado para almacenar las tareas y el estado de carga
   const [tareas, setTareas] = useState([])
   // useState para el estado de carga
   const [cargando, setCargando] = useState(true) 
+  
+  const onCompleted = async (e, task) => {
+
+
+  try {
+    const tareaActualizada = {
+      id: task.id,
+      titulo: task.titulo,
+      completado: e.target.checked ? 1 : 0
+    }
+
+    await axios.put(urlApi, tareaActualizada)
+    
+    // Actualización de estado local reactiva
+    setTareas(
+      tareas.map(t =>
+        t.id === task.id ? { ...t, completado: e.target.checked ? 1 : 0 } : t
+      )
+    )
+   
+
+  } catch (error) {
+    console.error('Error al actualizar la tarea:', error)
+  }
+}
+
+
+
+
+ 
 
   // useEffect para obtener las tareas desde la API al montar el componente
   useEffect(() => {
@@ -71,7 +92,7 @@ export default function ListaTareas() {
         <strong>{task.titulo}</strong> - {task.completado ? 'Completada' : 'Pendiente'} 
            <Link to={`/editar/${task.id}`}
           className='btn btn-warning btn-sm me-3'>Editar</Link>
-          <input type='checkbox' checked={task.completado} onChange={(e) => onCompleted(task.id, e.target.checked)} />
+          <input type='checkbox' checked={Boolean(Number(task.completado))} onChange={(e) => onCompleted(e,task)} />
       </li>
     )
    })
